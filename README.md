@@ -49,10 +49,8 @@ We include example notebooks under `examples/` to reproduce our baseline results
 
 ### Dataset  
 The MCNP-simulated HPGe soil gamma-ray spectra are released under the  
-[Creative Commons Attribution 4.0 International Public License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).  
-See the [LICENSE](LICENSE) file for full terms.  
+[Creative Commons Attribution 4.0 International Public License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).
 
 ### Code  
 All example code and notebooks in this repository are released under the  
 [MIT License](https://opensource.org/licenses/MIT).  
-See the [LICENSE-CODE](LICENSE-CODE) file for full terms.  
