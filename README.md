@@ -23,12 +23,6 @@ All data files are located in the `data/` folder:
 
 The dataset is released under a **CC BY 4.0** license.
 
-## 📊 Benchmarks
-We include example notebooks under `examples/` to reproduce our baseline results:
-
-- **Ridge Regression** and **XGBoost**: `examples/Machine_learning_regression.ipynb`  
-- **MLP** and **CNN**: `examples/Neural_net_pytorch_regression.ipynb` 
-
 ## 🚀 Quickstart
 
 ```bash
@@ -43,3 +37,22 @@ import numpy as np
 data = np.load('../data/hpge-soil-gamma-41.npz')
 x_train, y_train = data['x_train'], data['y_train']
 x_test,  y_test  = data['x_test'],  data['y_test']
+```
+
+## 📊 Benchmarks
+We include example notebooks under `examples/` to reproduce our baseline results:
+
+- **Ridge Regression** and **XGBoost**: `examples/Machine_learning_regression.ipynb`  
+- **MLP** and **CNN**: `examples/Neural_net_pytorch_regression.ipynb`
+
+## License
+
+### Dataset  
+The MCNP-simulated HPGe soil gamma-ray spectra are released under the  
+[Creative Commons Attribution 4.0 International Public License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode).  
+See the [LICENSE](LICENSE) file for full terms.  
+
+### Code  
+All example code and notebooks in this repository are released under the  
+[MIT License](https://opensource.org/licenses/MIT).  
+See the [LICENSE-CODE](LICENSE-CODE) file for full terms.  
