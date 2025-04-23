@@ -10,7 +10,7 @@ A manuscript describing this dataset and benchmarking results is currently **und
 
 All data files are located in the `data/` folder:
 
-- **`data_mp_all_balance.npz`**  
+- **`hpge-soil-gamma-41.npz`**  
   - Contains training and testing splits:  
     - `x_train` (4800×8192), `y_train` (4800×41)  
     - `x_test`  (1200×8192), `y_test`  (1200×41)  
