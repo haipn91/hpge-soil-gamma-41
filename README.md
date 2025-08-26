@@ -38,6 +38,35 @@ To ensure full reproducibility, we also provide the **MCNP input files** used to
 
 These input decks allow researchers to regenerate spectra under the same simulation conditions or extend the setup to new scenarios.
 
+## 🔄 Post-Processing Workflow
+
+We provide a reproducible workflow to convert MCNP tally outputs into 8192-channel spectra:
+
+1. **Collect output files**  
+   - Use Python’s `glob` to list all MCNP outputs (`Out****o`) in the simulation folder.  
+   - Store the file paths in a list (`PathList`).
+
+2. **Initialize output**  
+   - Create an output directory if not present.  
+   - Open a file (e.g., `GMX_THo`) to store extracted spectra.
+
+3. **Parse each MCNP output**  
+   - Read the file line by line (`readlines()`).  
+   - Locate the line containing `"cell  1"` (Ge detector crystal), typically between lines 1140–1500.  
+   - From two lines below this marker, extract the **Tally-8 (F8:P) results**.
+
+4. **Extract 8192 bins**  
+   - Read the next 8192 lines, each representing one energy channel.  
+   - Slice characters 16–28 to obtain the numeric count value.  
+   - Append all 8192 values to the output file on a single line.
+
+5. **Finalize**  
+   - Close the input file, then proceed to the next output.  
+   - After processing all files, the consolidated file (`GMX_THo`) will contain 6,000 rows × 8192 columns.  
+   - Each row corresponds to one simulated gamma-ray spectrum.
+
+👉 No additional calibration or smoothing was applied: the spectra reflect raw MCNP pulse-height tallies mapped to 8192 channels.
+
 ## 🚀 Quickstart
 
 ```bash
