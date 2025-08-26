@@ -8,20 +8,21 @@ A manuscript describing this dataset and benchmarking results is currently **und
 
 ## 📂 Dataset
 
-All data files are located in the `data/` folder:
+Due to GitHub file size limits, the large spectral files are hosted externally.  
+All dataset components are freely available under a **CC BY 4.0** license:
 
-- **`hpge-soil-gamma-41.npz`**  
-  - Contains training and testing splits:  
+- [**Spectra.csv**](https://drive.google.com/file/d/1pwHIeBFBW0vxcsvZKDMRbV3zPk6LtDF1/view?usp=sharing)  
+  - Full set of 6,000 spectra (each row is an 8192-channel vector).
+
+- [**hpge-soil-gamma-41.npz**](https://drive.google.com/file/d/16Bxfsa7TMqq65eRUCAdNwGt-UYQaiB1c/view?usp=sharing)  
+  - Pre-split training/testing arrays:  
     - `x_train` (4800×8192), `y_train` (4800×41)  
     - `x_test`  (1200×8192), `y_test`  (1200×41)  
 
-- **`Spectra.csv`**  
-  - The full set of 6,000 spectra (each row is an 8192-channel vector).
-
-- **`Activity.csv`**  
+- **`Activity.csv`** (included in this repository)  
   - Corresponding activity labels: columns are radionuclide names (41 columns), rows align with `Spectra.csv`.
 
-The dataset is released under a **CC BY 4.0** license.
+👉 For convenience, a text file [`link_download.txt`](./data/link_download.txt) is also provided in the `data/` folder containing the same download links.
 
 ## ⚛️ MCNP Input Decks
 
