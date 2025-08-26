@@ -23,6 +23,20 @@ All data files are located in the `data/` folder:
 
 The dataset is released under a **CC BY 4.0** license.
 
+## ⚛️ MCNP Input Decks
+
+To ensure full reproducibility, we also provide the **MCNP input files** used to generate the dataset:
+
+- **`Out0000`**  
+  - Defines the HPGe detector and soil-container geometry.  
+  - Material compositions (Ge, soil matrix, polystyrene, aluminum, copper, air).  
+  - Photon source definitions (energies and branching ratios from NuDat 3.0 and Nucléide-Lara).  
+  - Tally settings (F8:P pulse-height tally, 8192 channels).  
+  - Physics cards (photoelectric effect, Compton scattering, pair production; 10 keV cut-off).  
+  - Explicit random-number seed.
+
+These input decks allow researchers to regenerate spectra under the same simulation conditions or extend the setup to new scenarios.
+
 ## 🚀 Quickstart
 
 ```bash
