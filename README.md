@@ -89,6 +89,17 @@ We include example notebooks under `examples/` to reproduce our baseline results
 - **Ridge Regression** and **XGBoost**: `examples/Machine_learning_regression.ipynb`  
 - **MLP** and **CNN**: `examples/Neural_net_pytorch_regression.ipynb`
 
+## 🧪 Worked Example: Load Saved Model & Predict One Spectrum
+
+Use the script below to load the saved scaler and Ridge model, select a random test sample, and predict activities for all 41 isotopes.
+
+```bash
+python examples/infer_one_sample.py
+
+Ensure the following files exist (produced during training):
+scaler/input_scaler.sav
+models/ridge_multioutput_model.sav (or models/xgboost_multioutput_model.sav if you kept the original name)
+
 ## License
 
 ### Dataset  
