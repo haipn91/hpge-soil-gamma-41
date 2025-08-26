@@ -95,6 +95,7 @@ Use the script below to load the saved scaler and Ridge model, select a random t
 
 ```bash
 python examples/infer_one_sample.py
+```
 
 Ensure the following files exist (produced during training):
 scaler/input_scaler.sav
